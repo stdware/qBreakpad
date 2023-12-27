@@ -17,12 +17,14 @@
  *
  */
 
-#ifndef QBREAKPAD_HANDLER_H
-#define QBREAKPAD_HANDLER_H
+#ifndef QBREAKPADHANDLER_H
+#define QBREAKPADHANDLER_H
 
 #include <QString>
 #include <QUrl>
-#include "singletone/singleton.h"
+#include <QObject>
+
+#include <QBreakpadGlobal.h>
 
 namespace google_breakpad {
     class ExceptionHandler;
@@ -31,8 +33,7 @@ namespace google_breakpad {
 
 class QBreakpadHandlerPrivate;
 
-class QBreakpadHandler: public QObject
-{
+class QBREAKPAD_EXPORT QBreakpadHandler : public QObject {
     Q_OBJECT
 public:
     static QString version();
@@ -44,15 +45,21 @@ public:
     QString dumpPath() const;
     QStringList dumpFileList() const;
 
-    void setDumpPath(const QString& path);
-    void setUploadUrl(const QUrl& url);
+    void setDumpPath(const QString &path);
+    void setUploadUrl(const QUrl &url);
 
 public slots:
     void sendDumps();
 
+public:
+    typedef void (*HandlerFunc)();
+
+    static HandlerFunc UniqueExtraHandler;
+
 private:
-    QBreakpadHandlerPrivate* d;
+    QBreakpadHandlerPrivate *d;
 };
+
 #define QBreakpadInstance Singleton<QBreakpadHandler>::instance()
 
-#endif	// QBREAKPAD_HANDLER_H
+#endif // QBREAKPADHANDLER_H

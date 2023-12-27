@@ -17,8 +17,8 @@
  *
  */
  
-#ifndef QBREAKPAD_HTTP_SENDER_H
-#define QBREAKPAD_HTTP_SENDER_H
+#ifndef QBREAKPADHTTPUPLOADER_H
+#define QBREAKPADHTTPUPLOADER_H
 
 #include <QObject>
 #include <QPointer>
@@ -30,7 +30,9 @@ class QString;
 class QUrl;
 class QFile;
 
-class QBreakpadHttpUploader : public QObject
+#include <QBreakpadGlobal.h>
+
+class QBREAKPAD_EXPORT QBreakpadHttpUploader : public QObject
 {
 	Q_OBJECT
 public:
@@ -60,4 +62,4 @@ private:
     QFile* m_file;
 };
 
-#endif	// QBREAKPAD_HTTP_SENDER_H
+#endif // QBREAKPADHTTPUPLOADER_H
