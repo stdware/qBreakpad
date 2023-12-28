@@ -42,6 +42,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
 )
 
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_11)
+
 if(QBREAKPAD_INSTALL)
     target_include_directories(${PROJECT_NAME} PUBLIC
         "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${QBREAKPAD_INSTALL_NAME}>"

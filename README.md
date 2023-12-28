@@ -1,4 +1,4 @@
-#qBreakpad
+# qBreakpad
 
 [![Build status](https://travis-ci.org/buzzySmile/qBreakpad.svg?branch=master)](https://travis-ci.org/buzzySmile/qBreakpad)
 

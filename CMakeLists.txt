@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(qBreakpad VERSION 0.0.1.1 LANGUAGES CXX)
+project(qBreakpad VERSION 0.2.1.1 LANGUAGES CXX)
 
 option(QBREAKPAD_BUILD_STATIC "Build static library" off)
 option(QBREAKPAD_INSTALL "Install library" on)
