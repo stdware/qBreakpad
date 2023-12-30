@@ -1,6 +1,8 @@
 #ifndef QBREAKPADGLOBAL_H
 #define QBREAKPADGLOBAL_H
 
+#include <QtGlobal>
+
 #ifndef QBREAKPAD_EXPORT
 #  ifdef QBREAKPAD_STATIC
 #    define QBREAKPAD_EXPORT

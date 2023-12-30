@@ -1,5 +1,3 @@
-project(qBreakpad VERSION 0.2.1.1 LANGUAGES CXX)
-
 set(CMAKE_AUTOMOC on)
 set(CMAKE_AUTOUIC on)
 set(CMAKE_AUTORCC on)
