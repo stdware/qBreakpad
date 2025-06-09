@@ -150,6 +150,11 @@ QString QBreakpadHandler::uploadUrl() const
     return d->uploadUrl.toString();
 }
 
+QString QBreakpadHandler::dumpPath() const
+{
+    return d->dumpPath;
+}
+
 QStringList QBreakpadHandler::dumpFileList() const
 {
     if(!d->dumpPath.isNull() && !d->dumpPath.isEmpty()) {
